@@ -69,62 +69,107 @@ ClearPulse is more than just a tool—it’s your partner in achieving clarity, 
 
 ## Project Structure
 
-```
-developer-productivity-insights/
-│
-├── data/
-│   ├── raw/                # Raw data from GitHub and Jira (JSON, CSV files)
-│   ├── processed/          # Cleaned and preprocessed data (CSV, DataFrame)
-│   ├── transformed/        # Features ready for machine learning models
-│   └── analysis/           # Output from analyses like clustering, timeseries
-│
-├── notebooks/              # Jupyter Notebooks for exploration and model prototyping
-│   ├── data_collection.ipynb  # Explore how to collect data from GitHub and Jira
-│   ├── data_preprocessing.ipynb # Clean and preprocess raw data
-│   ├── clustering_analysis.ipynb  # Experiment with clustering algorithms
-│   ├── timeseries_analysis.ipynb # Time-series modeling with ARIMA/LSTM
-│   └── visualization.ipynb     # Plot results (e.g., trends, activity, clusters)
-│
-├── src/                    # Core source code for the system
-│   ├── __init__.py          # Marks this directory as a Python package
-│   ├── data_collection.py   # Python script for collecting data from GitHub and Jira APIs
-│   ├── data_preprocessing.py # Preprocessing functions (cleaning, feature engineering)
-│   ├── modeling/            # Machine learning model-related code
-│   │   ├── clustering.py     # Clustering algorithms (K-Means, DBSCAN, etc.)
-│   │   ├── time_series.py    # Time-series models (ARIMA, LSTM)
-│   │   └── anomaly_detection.py  # Anomaly detection for identifying unusual activity
-│   ├── insights/            # Code for generating insights and bottleneck identification
-│   │   ├── bottleneck_analysis.py   # Identify bottlenecks in workflows
-│   │   └── productivity_metrics.py  # Generate developer/team productivity metrics
-│   ├── visualization/       # Code for generating reports and visualizations
-│   │   ├── dashboard.py      # Integrates with Flask/Django for the web dashboard
-│   │   ├── plots.py         # Helper functions to create graphs/charts
-│   │   └── reports.py       # Generate PDF or HTML reports with insights
-│   ├── deployment/          # Deployment scripts and configurations (e.g., Docker, cloud setup)
-│   │   ├── app.py            # Main Flask app or Django entry point
-│   │   ├── requirements.txt  # List of dependencies
-│   │   └── Dockerfile        # Docker container setup (if using Docker)
-│   └── utils/               # Utility functions (e.g., API requests, data saving/loading)
-│       ├── api_utils.py      # API helper functions for GitHub and Jira requests
-│       ├── file_utils.py     # Functions for reading/writing files (e.g., CSV, JSON)
-│       └── config.py         # Configuration file for API keys, file paths
-│
-├── tests/                   # Unit and integration tests
-│   ├── test_data_collection.py  # Tests for data collection from APIs
-│   ├── test_data_preprocessing.py # Tests for data cleaning and transformation
-│   ├── test_modeling.py       # Tests for clustering, time-series models
-│   ├── test_insights.py       # Tests for generating productivity insights
-│   └── test_visualization.py  # Tests for the dashboard and report generation
-│
-├── config/                  # Configuration files (API keys, credentials, etc.)
-│   ├── config.json           # Store credentials, repository names, etc.
-│   ├── git_config.json       # GitHub API configuration (e.g., tokens, repo names)
-│   └── jira_config.json      # Jira API configuration (e.g., email, tokens, project IDs)
-│
-├── requirements.txt          # List of Python dependencies
-├── README.md                # Project overview, installation, and usage instructions
-└── .gitignore               # Files and directories to ignore in Git (e.g., config files, data)
-```
+This project is organized into several directories, each serving a specific purpose:
+
+- `data/`: Contains raw, processed, and transformed data, as well as analysis outputs.
+   - `raw/`: Raw data from GitHub and Jira (JSON, CSV files).
+   - `processed/`: Cleaned and preprocessed data (CSV, DataFrame).
+   - `transformed/`: Features ready for machine learning models.
+   - `analysis/`: Output from analyses like clustering, timeseries.
+
+- `notebooks/`: Jupyter Notebooks for exploration and model prototyping.
+   - `data_collection.ipynb`: Explore how to collect data from GitHub and Jira.
+   - `data_preprocessing.ipynb`: Clean and preprocess raw data.
+   - `clustering_analysis.ipynb`: Experiment with clustering algorithms.
+   - `timeseries_analysis.ipynb`: Time-series modeling with ARIMA/LSTM.
+   - `visualization.ipynb`: Plot results (e.g., trends, activity, clusters).
+
+- `src/`: Core source code for the system.
+   - `__init__.py`: Marks this directory as a Python package.
+   - `data_collection.py`: Python script for collecting data from GitHub and Jira APIs.
+   - `data_preprocessing.py`: Preprocessing functions (cleaning, feature engineering).
+   - `modeling/`: Machine learning model-related code.
+     - `clustering.py`: Clustering algorithms (K-Means, DBSCAN, etc.).
+     - `time_series.py`: Time-series models (ARIMA, LSTM).
+     - `anomaly_detection.py`: Anomaly detection for identifying unusual activity.
+   - `insights/`: Code for generating insights and bottleneck identification.
+     - `bottleneck_analysis.py`: Identify bottlenecks in workflows.
+     - `productivity_metrics.py`: Generate developer/team productivity metrics.
+   - `visualization/`: Code for generating reports and visualizations.
+     - `dashboard.py`: Integrates with Flask/Django for the web dashboard.
+     - `plots.py`: Helper functions to create graphs/charts.
+     - `reports.py`: Generate PDF or HTML reports with insights.
+   - `deployment/`: Deployment scripts and configurations (e.g., Docker, cloud setup).
+     - `app.py`: Main Flask app or Django entry point.
+     - `requirements.txt`: List of dependencies.
+     - `Dockerfile`: Docker container setup (if using Docker).
+   - `utils/`: Utility functions (e.g., API requests, data saving/loading).
+     - `api_utils.py`: API helper functions for GitHub and Jira requests.
+     - `file_utils.py`: Functions for reading/writing files (e.g., CSV, JSON).
+     - `config.py`: Configuration file for API keys, file paths.
+
+- `tests/`: Unit and integration tests.
+   - `test_data_collection.py`: Tests for data collection from APIs.
+   - `test_data_preprocessing.py`: Tests for data cleaning and transformation.
+   - `test_modeling.py`: Tests for clustering, time-series models.
+   - `test_insights.py`: Tests for generating productivity insights.
+   - `test_visualization.py`: Tests for the dashboard and report generation.
+
+- `config/`: Configuration files (API keys, credentials, etc.).
+   - `config.json`: Store credentials, repository names, etc.
+   - `git_config.json`: GitHub API configuration (e.g., tokens, repo names).
+   - `jira_config.json`: Jira API configuration (e.g., email, tokens, project IDs).
+
+- `requirements.txt`: List of Python dependencies.
+- `.gitignore`: Files and directories to ignore in Git (e.g., config files, data).
+
+### Example Usage
+
+Here is an example of how to use ClearPulse to analyze developer productivity:
+
+1. **Collect Data**:
+   ```python
+   from src.data_collection import collect_github_data, collect_jira_data
+
+   # Collect data from GitHub
+   github_data = collect_github_data(repo_name='your-repo-name', token='your-github-token')
+
+   # Collect data from Jira
+   jira_data = collect_jira_data(project_id='your-project-id', email='your-email', token='your-jira-token')
+   ```
+
+2. **Preprocess Data**:
+   ```python
+   from src.data_preprocessing import preprocess_data
+
+   # Preprocess the collected data
+   processed_data = preprocess_data(github_data, jira_data)
+   ```
+
+3. **Generate Insights**:
+   ```python
+   from src.insights.productivity_metrics import generate_productivity_metrics
+
+   # Generate productivity metrics
+   metrics = generate_productivity_metrics(processed_data)
+   ```
+
+4. **Visualize Data**:
+   ```python
+   from src.visualization.plots import plot_productivity_metrics
+
+   # Plot productivity metrics
+   plot_productivity_metrics(metrics)
+   ```
+
+5. **Deploy Application**:
+   ```bash
+   # Build and run the Docker container
+   docker build -t clearpulse .
+   docker run -p 3000:3000 clearpulse
+   ```
+
+By following these steps, you can leverage ClearPulse to gain valuable insights into your development workflows and improve productivity.
 
 ### Detailed Explanation of Each Folder/Module:
 
