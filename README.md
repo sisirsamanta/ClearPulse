@@ -30,31 +30,46 @@ To get started with ClearPulse, follow these steps:
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/yourusername/ClearPulse.git
+   ```
 
 2. **Install Dependencies**:
+   ```bash
    cd ClearPulse
-  npm install
+   npm install
+   ```
+
 3. **Run the Application**:
+   ```bash
    npm start
+   ```
 
-4. **Explore the Dashboard**: Open your browser and navigate to http://localhost:3000 to view your productivity insights.
+4. **Explore the Dashboard**: Open your browser and navigate to `http://localhost:3000` to view your productivity insights.
 
+---
 
-# Contributing
+## Contributing
+
 We welcome contributions from the community! If you'd like to contribute to ClearPulse, please read our Contribution Guidelines and submit a pull request.
 
-# License
+---
+
+## License
+
 ClearPulse is open-source and licensed under the MIT License. Feel free to use, modify, and distribute it as needed.
 
-# Feedback and Support
+---
+
+## Feedback and Support
+
 Have questions, suggestions, or need support? Reach out to us at sisir.samanta@gmail.com or open an issue on GitHub. We’d love to hear from you!
 
 ClearPulse is more than just a tool—it’s your partner in achieving clarity, transparency, and peak productivity in software development. Let’s build better, together.
 
+---
 
-/*
-Project Structure:
+## Project Structure
 
+```
 developer-productivity-insights/
 │
 ├── data/
@@ -109,55 +124,54 @@ developer-productivity-insights/
 ├── requirements.txt          # List of Python dependencies
 ├── README.md                # Project overview, installation, and usage instructions
 └── .gitignore               # Files and directories to ignore in Git (e.g., config files, data)
+```
 
-Detailed Explanation of Each Folder/Module:
-1. data/
-   - raw/: Contains raw data files from GitHub and Jira (JSON, CSV).
-   - processed/: Cleaned and preprocessed data (CSV, DataFrame).
-   - transformed/: Feature-engineered datasets ready for analysis.
-   - analysis/: Results from data analysis (e.g., clustering output, timeseries forecasts).
+### Detailed Explanation of Each Folder/Module:
 
-2. notebooks/
+1. **data/**
+   - **raw/**: Contains raw data files from GitHub and Jira (JSON, CSV).
+   - **processed/**: Cleaned and preprocessed data (CSV, DataFrame).
+   - **transformed/**: Feature-engineered datasets ready for analysis.
+   - **analysis/**: Results from data analysis (e.g., clustering output, timeseries forecasts).
+
+2. **notebooks/**
    - Jupyter Notebooks for exploratory analysis, model testing, and prototyping.
-   - data_collection.ipynb: Data collection from GitHub and Jira.
-   - data_preprocessing.ipynb: Data cleaning and feature engineering.
-   - clustering_analysis.ipynb: Clustering algorithm experiments.
-   - timeseries_analysis.ipynb: Time-series forecasting models.
-   - visualization.ipynb: Data visualization and trend analysis.
+   - **data_collection.ipynb**: Data collection from GitHub and Jira.
+   - **data_preprocessing.ipynb**: Data cleaning and feature engineering.
+   - **clustering_analysis.ipynb**: Clustering algorithm experiments.
+   - **timeseries_analysis.ipynb**: Time-series forecasting models.
+   - **visualization.ipynb**: Data visualization and trend analysis.
 
-3. src/
+3. **src/**
    - Core Python scripts organized by functionality.
-   - data_collection.py: Functions for GitHub and Jira API data collection.
-   - data_preprocessing.py: Data cleaning and preprocessing functions.
-   - modeling/: Machine learning models (clustering, time-series, anomaly detection).
-   - insights/: Functions for generating productivity insights and identifying bottlenecks.
-   - visualization/: Functions for creating visualizations and reports.
-   - deployment/: Deployment scripts and configurations (Docker, cloud setup).
-   - utils/: Helper functions (API requests, file handling, configuration).
+   - **data_collection.py**: Functions for GitHub and Jira API data collection.
+   - **data_preprocessing.py**: Data cleaning and preprocessing functions.
+   - **modeling/**: Machine learning models (clustering, time-series, anomaly detection).
+   - **insights/**: Functions for generating productivity insights and identifying bottlenecks.
+   - **visualization/**: Functions for creating visualizations and reports.
+   - **deployment/**: Deployment scripts and configurations (Docker, cloud setup).
+   - **utils/**: Helper functions (API requests, file handling, configuration).
 
-4. tests/
+4. **tests/**
    - Unit and integration tests for system reliability.
-   - test_data_collection.py: Tests for data collection functions.
-   - test_data_preprocessing.py: Tests for data preprocessing functions.
-   - test_modeling.py: Tests for machine learning models.
-   - test_insights.py: Tests for productivity insights generation.
-   - test_visualization.py: Tests for visualization and report generation.
+   - **test_data_collection.py**: Tests for data collection functions.
+   - **test_data_preprocessing.py**: Tests for data preprocessing functions.
+   - **test_modeling.py**: Tests for machine learning models.
+   - **test_insights.py**: Tests for productivity insights generation.
+   - **test_visualization.py**: Tests for visualization and report generation.
 
-5. config/
+5. **config/**
    - Configuration files for API keys, credentials, and project-specific settings.
-   - config.json: General configurations (file paths, etc.).
-   - git_config.json: GitHub API configuration (tokens, repo names).
-   - jira_config.json: Jira API configuration (credentials, project IDs).
+   - **config.json**: General configurations (file paths, etc.).
+   - **git_config.json**: GitHub API configuration (tokens, repo names).
+   - **jira_config.json**: Jira API configuration (credentials, project IDs).
 
-6. requirements.txt
+6. **requirements.txt**
    - Lists Python dependencies required for the project.
 
-7. .gitignore
+7. **.gitignore**
    - Specifies files and directories to be ignored by Git (e.g., sensitive information, large files).
 
 Example Files:
-- README.md: Project overview, installation steps, usage examples, and contribution guidelines.
-- Dockerfile: Docker setup for deployment.
-*/
-
-
+- **README.md**: Project overview, installation steps, usage examples, and contribution guidelines.
+- **Dockerfile**: Docker setup for deployment.
